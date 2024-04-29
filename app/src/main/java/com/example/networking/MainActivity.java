@@ -76,8 +76,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Type type = new TypeToken<List<Mountain>>() {}.getType();
         List<Mountain> listOfMountains = gson.fromJson(json, type);
         items.addAll(listOfMountains);
-
-
     }
 
 }
