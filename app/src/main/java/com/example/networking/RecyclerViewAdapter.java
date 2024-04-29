@@ -31,7 +31,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.title.setText(items.get(position).info());
+        holder.title.setText(items.get(position).getName());
+        holder.location.setText(items.get(position).getLocation());
+        holder.size.setText(items.get(position).getSize()+" m");
     }
 
     @Override
@@ -41,11 +43,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView title;
+        TextView location;
+        TextView size;
 
         ViewHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
             title = itemView.findViewById(R.id.tv_title);
+            location = itemView.findViewById(R.id.tv_location);
+            size = itemView.findViewById(R.id.tv_size);
+
         }
 
         @Override
