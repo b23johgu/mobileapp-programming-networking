@@ -42,6 +42,8 @@ Created layout for each mountain item with a new layout file.
 There are three textView elements which will represent the name, location and size of each mountain.
 [mountain_item.xml]
 
+[screenshots/screenshotrecyclerview.png](Screenshot of layout)
+
 Created a RecyclerView.Adapter class and RecyclerView.ViewHolder that connects the data in Mountain class to textView elements in mountain_item.xml.
 [RecyclerViewAdapter.java]
 
